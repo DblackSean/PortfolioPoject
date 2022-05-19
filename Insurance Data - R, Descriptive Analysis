@@ -107,7 +107,7 @@ paymentsZonebarChart <-
   scale_y_continuous(labels = comma)+
     ylab("Payments in Swedish Krona (SEK)") +
     ggtitle("Total Payments per Geographical Area") +
-    scale_fill_hue(labels = c("1: Stockholm, Göteborg, and Malmö with surroundings", "2: Other large cities with surroundings","3: Smaller cities with surroundings in southern Sweden","4: Rural areas in southern Sweden","5: Smaller cities with surroundings in northern Sweden","6: Rural areas in northern Sweden", "7: Gotland"))
+    scale_fill_hue(labels = c("1: Stockholm, GÃ¶teborg, and MalmÃ¶ with surroundings", "2: Other large cities with surroundings","3: Smaller cities with surroundings in southern Sweden","4: Rural areas in southern Sweden","5: Smaller cities with surroundings in northern Sweden","6: Rural areas in northern Sweden", "7: Gotland"))
 
 meanPaymentZone <- 
   insuranceDetails %>%
@@ -117,7 +117,7 @@ meanPaymentZone <-
   scale_y_continuous(labels = comma) +
   ylab("Payments in Swedish Krona (SEK)") +
   ggtitle("Average Payments per Geographical Area") +
-  scale_fill_hue(labels = c("1: Stockholm, Göteborg, and Malmö with surroundings", "2: Other large cities with surroundings","3: Smaller cities with surroundings in southern Sweden","4: Rural areas in southern Sweden","5: Smaller cities with surroundings in northern Sweden","6: Rural areas in northern Sweden", "7: Gotland"))
+  scale_fill_hue(labels = c("1: Stockholm, GÃ¶teborg, and MalmÃ¶ with surroundings", "2: Other large cities with surroundings","3: Smaller cities with surroundings in southern Sweden","4: Rural areas in southern Sweden","5: Smaller cities with surroundings in northern Sweden","6: Rural areas in northern Sweden", "7: Gotland"))
 
 ggarrange(paymentsZonebarChart, meanPaymentZone, align = "h", common.legend = TRUE, legend = "right")
 
@@ -147,7 +147,7 @@ claimsZonebar <- insuranceDetails %>%
   scale_y_continuous(labels = comma) + 
   ylab("Number of Claims") +
   ggtitle("Total Number of Claims per Geographical Area") +
-  scale_fill_hue(labels = c("1: Stockholm, Göteborg, and Malmö with surroundings", "2: Other large cities with surroundings","3: Smaller cities with surroundings in southern Sweden","4: Rural areas in southern Sweden","5: Smaller cities with surroundings in northern Sweden","6: Rural areas in northern Sweden", "7: Gotland"))
+  scale_fill_hue(labels = c("1: Stockholm, GÃ¶teborg, and MalmÃ¶ with surroundings", "2: Other large cities with surroundings","3: Smaller cities with surroundings in southern Sweden","4: Rural areas in southern Sweden","5: Smaller cities with surroundings in northern Sweden","6: Rural areas in northern Sweden", "7: Gotland"))
 
 meanclaimsZoneBar <- insuranceDetails %>%
   ggplot(aes(Zone,Claims, fill = Zone)) +
@@ -155,7 +155,7 @@ meanclaimsZoneBar <- insuranceDetails %>%
   stat_summary(fun.data = "mean_cl_normal", geom = "errorbar",position = position_dodge(width = 0.90), width = 0.2) +
   ylab("Number of Claims") +
   ggtitle("Average Number of Claims per Geographical Area") +
-  scale_fill_hue(labels = c("1: Stockholm, Göteborg, and Malmö with surroundings", "2: Other large cities with surroundings","3: Smaller cities with surroundings in southern Sweden","4: Rural areas in southern Sweden","5: Smaller cities with surroundings in northern Sweden","6: Rural areas in northern Sweden", "7: Gotland"))
+  scale_fill_hue(labels = c("1: Stockholm, GÃ¶teborg, and MalmÃ¶ with surroundings", "2: Other large cities with surroundings","3: Smaller cities with surroundings in southern Sweden","4: Rural areas in southern Sweden","5: Smaller cities with surroundings in northern Sweden","6: Rural areas in northern Sweden", "7: Gotland"))
 
 ggarrange(claimsZonebar, meanclaimsZoneBar, align = "h", common.legend = TRUE, legend = "right")
 
@@ -235,7 +235,7 @@ insuredZoneBar <-
   scale_y_continuous(labels = comma) + 
   ylab("Years Insured") +
   ggtitle("Total Number of Insured (Years) per Geographical Area")+
-  scale_fill_hue(labels = c("1: Stockholm, Göteborg, and Malmö with surroundings", "2: Other large cities with surroundings","3: Smaller cities with surroundings in southern Sweden","4: Rural areas in southern Sweden","5: Smaller cities with surroundings in northern Sweden","6: Rural areas in northern Sweden", "7: Gotland"))
+  scale_fill_hue(labels = c("1: Stockholm, GÃ¶teborg, and MalmÃ¶ with surroundings", "2: Other large cities with surroundings","3: Smaller cities with surroundings in southern Sweden","4: Rural areas in southern Sweden","5: Smaller cities with surroundings in northern Sweden","6: Rural areas in northern Sweden", "7: Gotland"))
 
 meaninsuredZoneBar <- 
   insuranceDetails %>%
@@ -245,7 +245,7 @@ meaninsuredZoneBar <-
   scale_y_continuous(labels = comma) +
   ylab("Years Insured") +
   ggtitle("Average Number of Insured per Geographical Area") +
-  scale_fill_hue(labels = c("1: Stockholm, Göteborg, and Malmö with surroundings", "2: Other large cities with surroundings","3: Smaller cities with surroundings in southern Sweden","4: Rural areas in southern Sweden","5: Smaller cities with surroundings in northern Sweden","6: Rural areas in northern Sweden", "7: Gotland"))
+  scale_fill_hue(labels = c("1: Stockholm, GÃ¶teborg, and MalmÃ¶ with surroundings", "2: Other large cities with surroundings","3: Smaller cities with surroundings in southern Sweden","4: Rural areas in southern Sweden","5: Smaller cities with surroundings in northern Sweden","6: Rural areas in northern Sweden", "7: Gotland"))
 
 ggarrange(insuredZoneBar, meaninsuredZoneBar, align = "h", common.legend = TRUE, legend = "right")
 
